@@ -1,6 +1,8 @@
 @import 'css-reset.css';
 
-/* CSS here :) */
+html {
+  scroll-behavior: smooth;
+}
 *{
 	box-sizing: border-box;
     margin: 0;
@@ -59,6 +61,14 @@ nav ul li:hover::after {
   100% {
     width:100%;
   }
+}
+
+
+nav ul li a{
+	text-decoration: none;
+	color: #fff;
+
+
 }
 
 img.burger{
@@ -349,19 +359,19 @@ has to use the vw unit to work on any screen size
 */
 
 .photos img.tesla{
-	transform: translateY(-0.5vw) scaleY(1.06);
+	transform: translateY(-0.5vw) scaleY(1.2);
 	/*transition: none; */
 }
 .photos img.sneaky{
-	transform: translateY(-1.5vw) scaleY(1.06);
+	transform: translateY(-0.5vw) scaleY(1.2);
 	/*transition: none; */
 }
 .photos img.falcon{
-	transform: translateY(-1.3vw) scaleY(1.06) scaleX(1.1);
+	transform: translateY(-1.3vw) scaleY(1.2) scaleX(1.1);
 	/*transition: none; */
 }
 .photos img.funny{
-	transform: translateY(-0.9vw) scaleY(0.999);
+	transform: translateY(-1vw) scaleY(1.1) scaleX(1.1);
 	/*transition: none; */
 }
 .photos img.hyper{
@@ -377,7 +387,19 @@ has to use the vw unit to work on any screen size
 	transform: translateY(8vw) translateX(13vw);
 }
 .photos div.falcon_text{
-	transform: translateY(9vw) translateX(13vw);
+	transform: translateY(11vw) translateX(13vw);
+}
+.photos div.tesla_text{
+	transform: translateY(11vw) translateX(10vw);
+}
+.photos div.cool_text{
+	transform: translateY(11vw) translateX(15vw);
+}
+.photos div.hyper_text{
+	transform: translateY(11vw) translateX(12vw);
+}
+.photos div.sneaky_text{
+	transform: translateY(11vw) translateX(13vw);
 }
 
 .img_container.pro{
@@ -386,9 +408,19 @@ has to use the vw unit to work on any screen size
 .img_container.hyper{
 	height: 55%;
 } 
-
+.img_container.tesla{
+	height: 55%;
+} 
+.img_container.sneaky{
+	height: 52%;
+} 
+.img_container.falcon{
+	height: 52%;
+} 
 .img_container{
-	 overflow: hidden;
+	/*extremely important, so that the images don't 
+	overlap each other on hover zooming*/
+	 overflow: hidden; 
 	
 }
 .img_container div{
@@ -416,6 +448,9 @@ has to use the vw unit to work on any screen size
 
 .img_container:hover img{
 	transform: scale(1.3) ;
+
+
+
 	/*animation: zoom 0.3s ;*/
 
 }
@@ -661,12 +696,24 @@ footer ul li a{
 	}
 
 	.photos div.sneaky_text {
-	    transform: translateY(20vw) translateX(39vw);
+	    transform: translateY(27vw) translateX(40vw);
 	}
 
 	.photos div.falcon_text {
-	    transform: translateY(24vw) translateX(36vw);
+	    transform: translateY(28vw) translateX(30vw);
 	}
+
+	.photos div.tesla_text {
+	    transform: translateY(27vw) translateX(28vw);
+	}
+	.photos div.cool_text{
+		transform: translateY(30vw) translateX(40vw);
+	}
+	.photos div.hyper_text{
+		transform: translateY(31vw) translateX(29vw);
+	}
+
+
 
 	section.features {
 	    display: flex;
